@@ -72,7 +72,7 @@ exports.get = function (req, res) {
 					messages: result
 				});	
 			}
-		})
+		});
 	}
 }
 
