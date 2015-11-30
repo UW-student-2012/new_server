@@ -14,6 +14,7 @@ var db = require('./db');
 //Routing
 //---------------------------------------------
 var api = require('./routes/api');
+var index = require('./routes/index');
 
 //---------------------------------------------
 // create express object
@@ -39,8 +40,9 @@ app.use(cookieParser());
 //-----------------------------------------------
 //Route
 //-----------------------------------------------
-app.use(express.static(path.join(__dirname, '../public')));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use('/api', api);
+app.use('/index', index);
 
 
 // catch 404 and forward to error handler

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='apiApp'>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>API</title>
+
+  <!-- Bootstrap -->
+  <link href="/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+
+</head>
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top"> 
+    <div class="container-fluid">  
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Create API</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/index">Back</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="jumbotron">
+  </br>
+  <div class="container">
+    <form class="form-horizontal" ng-controller="apiController">
+      <div class="form-group">
+        <label for="category" class="col-sm-2 control-label">Category</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="category" ng-model="apiObj.category" placeholder="Category" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="url" class="col-sm-2 control-label">URL</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="url" ng-model="apiObj.url" placeholder="URL" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="descrption" class="col-sm-2 control-label">Descrption</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="descrption" ng-model="apiObj.descrption" placeholder="Descrption" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="example" class="col-sm-2 control-label">Example</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="example" ng-model="apiObj.example" placeholder="Example" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="note" class="col-sm-2 control-label">Note</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="note" ng-model="apiObj.note" placeholder="Note">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" class="btn btn-default">Create</button>
+          <a href="/index" class="btn btn-default">Cancel</a>
+        </div>
+      </div>
+    </form>
+  </div>
+
+</div>
+
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  <!-- Angular -->
+  <script src="/angular/angular.min.js"></script>
+
+  <!-- include ng App here -->
+  <script src="/ng/apps/apiApp.js"></script>
+
+  <!-- include ng Controller here -->
+  <script src="/ng/apiModule/apiController.js"></script>
+
+</body>
+</html>
